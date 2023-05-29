@@ -20,7 +20,9 @@ function Form() {
         e.preventDefault();
         const formData = new FormData(e.target)
         const data = Object.fromEntries(formData);
-        if(!data.name || data.value || data.description) {
+        
+        if(!data.name || !data.value || !data.description) {
+            alert('Insira todos os dados!');
             return;
         }
         try {
@@ -30,7 +32,6 @@ function Form() {
                 value: Number(data.value),
                 disponible: disponible
             })
-            console.log(data.value)
             alert('produto cadastrado com sucesso');
         } catch (e) {
             console.log(e);
@@ -46,7 +47,7 @@ function Form() {
                 <label htmlFor="description">Descrição:</label>
                 <textarea name="description" id="description" cols="30" rows="10"></textarea>
                 <label htmlFor="value">Valor:</label>
-                <input type="text" name="value" id="value"/>
+                <input type="number" step='any' name="value" id="value"/>
                 <div id="disponible">
                     <label >Disponível para venda:</label>
                     <label htmlFor="yes">Sim</label>

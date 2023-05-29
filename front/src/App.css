@@ -13,4 +13,5 @@ list-style: none;
 html {
   background-color: #00172b;
   color: white;
+  overflow-y: auto;
 }

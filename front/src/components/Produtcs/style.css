@@ -1,10 +1,11 @@
 #container-table {
   margin-top: 20px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0;
+  padding: 10px;
   width: 100%;
 }
 
@@ -25,6 +26,7 @@
 
 #btn-new-register {
   position: absolute;
+  bottom: -60px;
   right: 200px;
   border: none;
   border-radius: 5px;
