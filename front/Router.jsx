@@ -9,7 +9,6 @@ function Router() {
             <Route exact path="/" element={<Form/>}/>
             <Route path="/cadastrar-produto" element={<Form/>}/>
             <Route path="/lista-produtos" element={<Produtcs/>}/>
-            {/* <Route path="*" element={<NotFound/>}/> */}
         </Routes>
     </>      
 

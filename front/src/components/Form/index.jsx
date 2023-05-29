@@ -20,16 +20,17 @@ function Form() {
         e.preventDefault();
         const formData = new FormData(e.target)
         const data = Object.fromEntries(formData);
-        if(!data.name) {
+        if(!data.name || data.value || data.description) {
             return;
         }
         try {
            await axios.post('http://localhost:3000/cadastrar-produto', {
                 name: data.name,
                 description: data.description,
-                value: parseFloat(data.value),
+                value: Number(data.value),
                 disponible: disponible
             })
+            console.log(data.value)
             alert('produto cadastrado com sucesso');
         } catch (e) {
             console.log(e);
